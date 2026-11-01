@@ -1,6 +1,6 @@
 {
   "name": "evidence-dev-skills",
-  "description": "Agent Skills for Evidence.dev — charts, inputs, maps, data sources, CLI and custom components for AI coding agents.",
+  "description": "Agent Skills for Evidence.dev: charts, inputs, maps, data sources, CLI and custom components for AI coding agents.",
   "version": "1.0.0",
   "author": {
     "name": "Devkind",
