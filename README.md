@@ -61,6 +61,12 @@ group by 1
 
 Switching to DuckDB or Snowflake? Ask about data sources and `evidence-data-sources` guides the `connection.yaml` setup. Deploying? `evidence-cli` covers build modes and platform config.
 
+## Network access and data
+
+This plugin is static markdown: nine `SKILL.md` files, with no hooks, commands, agents or MCP servers, and no code that runs when you install or use it. It collects and transmits no data and reads no credentials. The `scripts/validate_skills.py` file is a local frontmatter check used by CI and is not part of what your agent runs.
+
+Some skills show example commands for your own Evidence project, such as `npx degit evidence-dev/template`, `npm install` and `npm run dev`. They are instructions for you or your agent to run in that project, and nothing runs unless you do. Skills also show example connection settings and environment variables for your own data sources, and some map examples reference public GeoJSON and map tile URLs (for example OpenStreetMap) that your Evidence app, not this plugin, loads. The `evidence-maps` skill also notes that GeoJSON files may need to be fetched by the agent (via WebFetch or Bash) if they are not already present, so an agent may make that request on your behalf.
+
 ## License
 
 [MIT](LICENSE) © Devkind. See [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md).
