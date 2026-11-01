@@ -450,7 +450,7 @@ export { data };
 // sources/my_api/results.js
 // Environment variable must be prefixed with EVIDENCE_
 // Set in .env locally; add to build environment for production
-let auth = process.env.EVIDENCE_SOURCE_AUTH;
+let auth = <value of your EVIDENCE_SOURCE_AUTH environment variable>;
 let url = 'https://api.example.com/data';
 
 const response = await fetch(url, {
@@ -481,7 +481,7 @@ export { data };
 # .env
 EVIDENCE_SOURCE_AUTH=value_from_your_data_service
 ```
-Variables must be prefixed with `EVIDENCE_`. They are available via `process.env.EVIDENCE_*` inside `.js` source files.
+Variables must be prefixed with `EVIDENCE_`. Inside `.js` source files, read them from the Node environment (the `EVIDENCE_`-prefixed variables are exposed there).
 
 ### Full BigQuery connection.yaml (Service Account)
 
